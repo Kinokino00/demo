@@ -13,8 +13,16 @@ low, high = 1, 50
 x = random.randint(low, high)
 print(x)
 
-y = eval(input(f"請輸入一個數字{low}~{high}: "))
-if y == x:
-    print("恭喜猜對")
-else:
-    print("猜錯了!")
+for i in range(5):
+    y = eval(input(f"請輸入一個數字{low}~{high}: "))
+    if y == x:
+        print("恭喜猜對")
+        break
+    else:
+        if y > x:
+            print("猜低一點~")
+        else:
+            print("猜高一點~")
+        print("猜錯了!")
+if y != x:
+    print(f"答案為:{x}")
