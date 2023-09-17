@@ -21,8 +21,11 @@ for i in range(5):
     else:
         if y > x:
             print("猜低一點~")
+            if y < high:
+                high = y - 1
         else:
             print("猜高一點~")
-        print("猜錯了!")
+            if y > low:
+                low = y + 1
 if y != x:
     print(f"答案為:{x}")
